@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+    color: #e8eaed;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /**최소 높이는 화면 전체높이만큼, 100vh=100%Viewport Height**/
+    display: flex;
+    flex-direction: column; /**하위요소들 세로로 배치**/
+}
+.body{
+    flex: 1; /**남는 공간 전부 차지**/
+}
+.high-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 16px 26px;
+}
+.left, .right{
+    display: flex;
+    align-items: center;
+    gap: 20px; /**메뉴 사이 간격**/
+}
+a{
+  color: #e8eaed;
+  text-decoration: none; /**나타낼 대상 안에 있는 텍스트들의 밑줄을 뺀다. 다른 속성값으로 underline(밑줄을 생성, 링크 기능 가능),overline, line-thorugh(취소선) 등이 있다.**/
+  font-size: 14px;
+}
+/**.right a{}는 class가 right인 요소 안에 a태그들을 지정한다.**/
+.right a{
+    font-size: 13px;
+    padding-right: 5px;
+}
+a:hover{
+  text-decoration: underline; /**마우스포인터 올려놨을 때 밑줄**/
+}
+.right img{
+  width: 20px;
+  height: 24px;
+}
+#GL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.GI{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 186px;
+   margin-bottom: 14px;
+}
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /**(2026.03.01)어차피 하단 배너를 밑으로 보냈기 때문에 이 속성은 필요 없어서 삭제. 하지만 그 밑에 또 다른 요소가 있다면 그대로 남겨서 레이아웃을 자연스럽게 하는 것이 좋음.**/
+    /**margin-bottom: 30px;**/
+}
+.search-box{
+    /**이런 요소크기를 지정할 때 0.몇px단위는 피하는게 좋음.**/
+    /**width: 658.4px;**/
+    width: 658px; 
+    height: 50px;
+    border: 1px solid rgb(77, 81, 86);
+    border-radius: 26px; /**기본적으로 사각형인 보더의 각 모서리 굴곡을 어느정도로 할지에 대한 속성**/
+    padding: 0 14px;
+    background-color: rgb(77, 81, 86);
+    box-shadow: none; /**요소 박스에 그림자 효과 끄기**/
+    color: #e8eaed;
+    font-size: 16px;
+}
+/**:disabled의사클래스=활성화하지 않았을 때**/
+.search-box:disabled{
+    color: #e8eaed;
+    font-size: 16px;
+}
+
+/**============ (2026.03.01)이전 방식 =============**/
+/**.search-box:hover:not(:focus-within){
+    background-color: #5a5f63;
+    border: 1px solid #5a5f63;
+}
+.search-box:focus-within{
+    outline: none;
+    background-color: #303134;
+    border: 1px solid #303134;
+    color: #e8eaed;
+    font-size: 16px;
+}**/
+/**하위요소가 하나일 땐, 의사클래스 /**:focus-within보다는 :focus를 사용하는게 옳다.**/
+/**============       실사용 코드      ============**/
+.search-box:hover:not(:focus){
+    background-color: #5a5f63;
+    border: 1px solid #5a5f63;
+}
+.search-box:focus{
+    outline: none;
+    background-color: #303134;
+    border: 1px solid #303134;
+    color: #e8eaed;
+    font-size: 16px;
+}
+/**============================================================**/
+
+button{
+    color: #e8eaed;
+    background-color: #303134;
+    font-size: 14px;
+    border-radius: 7px;
+    border: 1px solid #303134;
+    height: 34.4px;
+    padding: 0px 15px;
+}
+button:hover{
+    border-color: rgb(95, 99, 104);
+    cursor: pointer; /**마우스 커서 올리면 잡는(클릭)모션으로 바뀜**/
+}
+.add-function{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /**요소간 간격**/
+}
+#block{
+    height: 382px;
+}
+.low-line{
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+}
+.lang{
+    display: flex;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgb(68, 71, 70);
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.lowest-banner{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0px 20px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+.lowest-left{
+    display: flex;
+    padding: 15px;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.lowest-right{
+    display: flex;
+    padding: 15px;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+/**전체적으로 색상을 지정할 때, rgb나 헥스코드 중 하나로 통일하는 것이 보기 좋음**/

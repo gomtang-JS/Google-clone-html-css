@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta lang="ko">
+    <!--HTML과 CSS를 구분하기 위한 태그-->
+    <link rel="stylesheet" href="style.css">
+    <title>Google</title>
+    </head>
+    <body>
+        <div class="body">
+
+        <header class="high-line">
+            <div class="left">
+                <a href="https://about.google/?fg=1&utm_source=google-KR&utm_medium=referral&utm_campaign=hp-header">Google 정보</a>
+                <a href="https://store.google.com/regionpicker?hl=en-US">스토어</a>
+            </div>
+            <div class="right">
+                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox">Gmail</a>
+                <a href="https://www.google.com/imghp?hl=ko&authuser=0&ogbl">이미지</a>
+                <a href="https://labs.google.com/search?source=hp&authuser=0"><img id="GL" src="Google/구글 랩스 사진 2.png" alt="Google Labs"></a>
+            </div>
+        </header>
+
+        <!--구글 가운데 로고랑 검색창을 그냥 한 div로 묶어서 가운데 배치하고 각각 따로 위치조정해주면 더 보기 좋음-->
+        <div class="GI">
+            <img src="Google/구글 로고 사진 1.png" alt="Google 로고"
+            width="308px" height="121px">
+        </div>
+        <div class="search">
+            <input type="text" placeholder  class="search-box">
+        </div>
+
+        <div class="add-function">
+            <!-- ================================================== -->
+            <!-- 2026.03.01 피드백: JS로 이동 처리하는 방식 (아직 학습 전,gpt추천) -->
+            <!--<button onclick="location.href='Google.html'">Google 검색</button>-->
+            <!--<button onclick="location.href='https://doodles.google/'">I'm Feeling Lucky</button>-->
+            <!-- ================================================== -->
+            <!-- 현재 사용 방식 (HTML,CSS만 이해) -->
+             <a href="file:///C:/Users/user/Desktop/HTML%20%EA%B3%B5%EB%B6%80/Google/Google.html"><button>Google 검색</button></a>
+             <a href="https://doodles.google/"><button>I'm Feeling Lucky</button></a>
+        </div>
+        <!--============================================================-->
+        <!--(2026.03.01)쓸데없는 공간 밀어내기용 요소 삭제-->
+        <!--<div id="block"></div>-->
+        <!--============================================================-->
+        </div>
+
+        <div class="low-line">
+            <div class="lang">대한민국</div>
+            <div class="lowest-banner">
+                <div class="lowest-left">
+                <a href="https://business.google.com/kr/google-ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=goog
+                le.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">광고</a>
+                <a href="https://business.google.com/kr/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_sour
+                ce=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">비즈니스</a>
+                <a href="https://www.google.com/search/howsearchworks/?fg=1">검색의 원리</a>
+                </div>
+                <div class="lowest-right">
+                <a href="https://policies.google.com/privacy?hl=ko&fg=1">개인정보처리방침</a>
+                <a href="https://policies.google.com/terms?hl=ko&fg=1">약관</a>
+                <!--(2026.03.01)p태그로 할 시, css에서 a태그 속성이 적용이 안되는 관계로(예를 들어 hover시 밑줄 등) 확장성을 생각해서 p에서 a태그로 변경-->
+                <!--<p>설정</p>-->
+                <a>설정</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!--위 <body></body>안에 div상위태그묶음을 크게 나눌 때, 각각 한 줄을 띄어서 보기 좋게 나누는 것이 좋을 것-->
+<!--더 좋은 방법이나 기능이 있다면 추가해서 사용할 것-->
